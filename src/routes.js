@@ -17,7 +17,7 @@ export default createAppContainer(
     }, {
         defaultNavigationOptions: {
             headerTintColor: '#000',
-            headerTitle: <Image style={{ marginHorizontal: 20}} source={logo} />,
+            headerTitle: () => <Image style={{ marginHorizontal: 20}} source={logo} />,
             headerBackTitleVisible: false,
         }, 
         mode: 'modal'
