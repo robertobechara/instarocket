@@ -11,12 +11,12 @@ export default class New extends Component {
     };
 
     state = {
+        preview: null,
+        image: null,
         author: '',
         place: '',
         description: '',
-        hashtags: '',
-        preview: null,
-        image: null, 
+        hashtags: '', 
     };
 
     handleSelectImage = () => {
@@ -51,7 +51,7 @@ export default class New extends Component {
 
                 this.setState({ preview, image })
             }
-        })
+        })  
     }
 
     handleSubmit = async () => {
@@ -75,7 +75,7 @@ export default class New extends Component {
                  <Text style={styles.selectButtonText}>Select a new image</Text>
             </TouchableOpacity>
 
-            { this.state.preview && <Image style={styles.preview} source={this.state.preview} /> }
+            { this.state.preview && <Image style={styles.preview} source={this.state.image} /> }
 
             <TextInput 
                 style={styles.input}
